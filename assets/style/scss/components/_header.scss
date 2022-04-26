@@ -1,0 +1,50 @@
+header {
+  color: #fff;
+  height: 100px;
+  font-size: 13px;
+  background-color: #000;
+
+  .container {
+    @include wrapper;
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 80px;
+    width: 100px;
+  }
+  .logo a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 80px;
+    color: $primary-color;
+  }
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  ul {
+    gap: 20px;
+    display: flex;
+    list-style: none;
+
+    .active {
+      color: #ccc;
+      border-bottom: 5px solid $primary-color;
+    }
+    a {
+      color: #fff;
+      height: 100px;
+      display: block;
+      font-weight: 600;
+      line-height: 100px;
+      text-transform: uppercase;
+      &:hover {
+        @extend .active;
+      }
+    }
+  }
+}
