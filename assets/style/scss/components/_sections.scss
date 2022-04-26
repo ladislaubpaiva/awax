@@ -1,0 +1,12 @@
+// || About US
+.section-about-us {
+  display: flex;
+
+  .main-container {
+    flex: 1;
+  }
+  .video-container {
+    width: 500px;
+    background-color: #f00;
+  }
+}
