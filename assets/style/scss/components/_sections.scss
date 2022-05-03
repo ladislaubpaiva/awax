@@ -53,6 +53,7 @@
 .section-projects {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   .projects-filters {
     border: 1px solid #ccc;
@@ -74,10 +75,37 @@
         &:first-child {
           border-left: 0;
         }
-        &.selected {
+        &.selected,
+        &:hover {
           border-bottom: 3px solid $primary-color;
         }
       }
     }
+  }
+}
+.projects-photos {
+  @include wrapper;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  .project-photo {
+    width: 280px;
+    text-align: center;
+  }
+}
+.photo-area {
+  margin: 10px;
+  width: 260px;
+  height: 160px;
+  img {
+    width: inherit;
+    height: inherit;
+  }
+  .photo-info {
+    @extend img;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
