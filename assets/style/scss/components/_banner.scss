@@ -3,7 +3,7 @@
 .banner {
   height: calc(100vh - 100px);
   flex-direction: row;
-  background: #333 url('assets/images/bg.jpg') no-repeat bottom / cover;
+  background: #333 url('../../../images/bg.jpg') no-repeat bottom / cover;
   overflow: hidden;
 
   .sliders {
