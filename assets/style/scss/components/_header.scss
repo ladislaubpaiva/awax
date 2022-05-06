@@ -44,6 +44,7 @@ header {
       font-weight: 600;
       line-height: 100px;
       text-transform: uppercase;
+      border-bottom: 5px solid transparent;
       &:hover {
         @extend .active;
       }
