@@ -37,11 +37,6 @@ header {
     gap: 20px;
     display: flex;
     list-style: none;
-
-    .active {
-      color: #ccc;
-      border-bottom: 5px solid $primary-color;
-    }
     a {
       color: #fff;
       height: 100px;
@@ -51,7 +46,8 @@ header {
       text-transform: uppercase;
       border-bottom: 5px solid transparent;
       &:hover {
-        @extend .active;
+        color: #ccc;
+        border-bottom: 5px solid $primary-color;
       }
     }
   }
@@ -89,10 +85,6 @@ header {
       }
       ul {
         flex-direction: column;
-        .active {
-          color: $primary-color;
-          border: none;
-        }
         a {
           margin-left: 50px;
           font-weight: bold;
@@ -102,6 +94,7 @@ header {
           border: none;
           &:hover {
             color: $primary-color;
+            border: none;
           }
         }
       }
