@@ -1,0 +1,119 @@
+@import './variables';
+footer {
+  background-color: #000;
+  padding: 50px 0;
+  .container {
+    display: flex;
+    @include wrapper();
+    color: #fff;
+  }
+  .footer-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-transform: capitalize;
+    a {
+      color: #666;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-text {
+    flex: 1;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999;
+    display: flex;
+    align-items: center;
+  }
+  .subscribe {
+    flex: 1;
+    padding: 30px;
+    form {
+      background-color: #333;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px;
+
+      input {
+        width: 80%;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #ccc;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ccc;
+      }
+      ::placeholder {
+        color: #ccc;
+      }
+      hr {
+        border: none;
+        background-color: #ccc;
+        height: 2px;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+  }
+  .social-links {
+    i {
+      color: #fff;
+      padding: 6px;
+      border-radius: 50%;
+      background-color: #666;
+      &:hover {
+        background-color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .container {
+    flex-direction: column;
+    .footer-copy {
+      padding: 30px;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-text {
+      padding: 0 30px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .container {
+    .footer-copy {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .footer-text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .subscribe {
+      padding-left: 0;
+      padding-right: 0;
+      form {
+        padding: 15px;
+      }
+    }
+  }
+}

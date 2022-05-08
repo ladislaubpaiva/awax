@@ -3,6 +3,8 @@
 .banner {
   height: calc(100vh - 100px);
   flex-direction: row;
+  position: relative;
+  top: 100px;
   background: #333 url('/awax/assets/images/bg.jpg') no-repeat bottom / cover;
   overflow: hidden;
 
@@ -37,5 +39,26 @@
     @extend .title;
     font-size: 24px;
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner {
+    h1 {
+      font-size: 2.4em;
+    }
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .banner {
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1em;
+    }
   }
 }

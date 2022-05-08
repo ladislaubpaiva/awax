@@ -3,13 +3,18 @@
 header {
   color: #fff;
   height: 100px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
   font-size: 13px;
   background-color: #000;
+  position: fixed;
 
   .container {
     @include wrapper;
     display: flex;
     align-items: center;
+    height: 100%;
   }
   .logo {
     height: 80px;
@@ -48,6 +53,83 @@ header {
       &:hover {
         @extend .active;
       }
+    }
+  }
+  .icon-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  header {
+    .container {
+      padding: 0;
+    }
+    .logo {
+      margin-left: 30px;
+    }
+    .menu {
+      nav {
+        width: 70vw;
+        display: none;
+        top: 100px;
+        z-index: 999;
+        position: absolute;
+        height: calc(100vh - 100px);
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      ul {
+        flex-direction: column;
+        .active {
+          color: $primary-color;
+          border: none;
+        }
+        a {
+          margin-left: 50px;
+          font-weight: bold;
+          height: 80px;
+          line-height: 80px;
+          font-size: 22px;
+          border: none;
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+      .icon-menu {
+        display: block;
+        margin-right: 30px;
+
+        i {
+          font-size: 2.8rem;
+          color: $primary-color;
+          &.bx-x {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  header .menu {
+    nav {
+      width: 80vw;
+    }
+    ul a {
+      margin-left: 30px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 18px;
     }
   }
 }
